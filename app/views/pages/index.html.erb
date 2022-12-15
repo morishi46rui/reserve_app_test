@@ -1,11 +1,2 @@
-<h1>ホーム画面</h1>
-<% if user_signed_in? %>
-  <h2>ようこそ、<%= current_user.name %>さん。</h2>
-  <h4>メールアドレス： <%= current_user.email %></h4>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-<% else %>
-  <h4>ゲスト</h4>
-  <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-  <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-<% end %>
-<p>Find me in app/views/pages/index.html.erb</p>
+
+<h1> メインのやつ </h1>

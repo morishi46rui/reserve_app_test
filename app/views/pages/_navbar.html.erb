@@ -1,0 +1,19 @@
+<header class="header">
+  <div class="homeLogo"> 
+    <h1>宿泊予約サイト</h1>
+  </div>
+  <div class="nav">
+    <% if user_signed_in? %>
+      <h2>ようこそ、<%= current_user.name %>さん。</h2>
+      <h4>メールアドレス： <%= current_user.email %></h4>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <h2>ようこそ、ゲストさん。</h2>
+      <div class="buttons">
+        <button class="buttonLogin"> <%= link_to "ログイン", new_user_session_path, class: 'post' %> </button>
+        <button class="buttonSignup"> <%= link_to "新規登録", new_user_registration_path, class: 'post' %> </button>
+      <div>
+      
+    <% end %>
+  </div>
+</header>
