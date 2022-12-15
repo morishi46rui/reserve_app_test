@@ -7,6 +7,7 @@
       <h2>ようこそ、<%= current_user.name %>さん。</h2>
       <h4>メールアドレス： <%= current_user.email %></h4>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to  "ユーザ登録情報編集", edit_user_registration_path, class: "navbar-item" %>
     <% else %>
       <h2>ようこそ、ゲストさん。</h2>
       <div class="buttons">
