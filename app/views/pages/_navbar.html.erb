@@ -14,7 +14,15 @@
         <button class="buttonLogin"> <%= link_to "ログイン", new_user_session_path, class: 'post' %> </button>
         <button class="buttonSignup"> <%= link_to "新規登録", new_user_registration_path, class: 'post' %> </button>
       <div>
-      
+    <% end %>
+    <% if user_signed_in? %>
+      <nav class="navbar has-shadow" style="z-index: 3;">
+        <div class="container">
+          <div class="navbar">
+            <%= link_to 'ダッシュボード', dashboard_path, class: "navbar-item" %>
+          </div>
+        </div>
+      </nav>  
     <% end %>
   </div>
 </header>
